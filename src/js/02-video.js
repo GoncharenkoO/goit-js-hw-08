@@ -13,6 +13,7 @@ player.on('timeupdate', throttle(onPlay, 1000));
     
 
 if (!localStorage.getItem('videoplayer-current-time')) {
+    return;
+}
     const currenTime = JSON.parse(localStorage.getItem('videoplayer-current-time'));
     player.setCurrentTime(currenTime);
-}
