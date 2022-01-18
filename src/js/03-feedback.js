@@ -15,7 +15,6 @@ refsFormEl.addEventListener('submit', event => {
      console.log(localStorage.getItem('feedback-form-state'));
         event.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
-    console.log('hello');
 });
 
 function populateTextarea() {
