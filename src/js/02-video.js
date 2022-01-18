@@ -7,14 +7,14 @@ const player = new Player(iframe);
 
 const onPlay = function (event) {
     localStorage.setItem("videoplayer-current-time", event.seconds);
-    // };
+    };
 
     player.on('timeupdate', throttle(onPlay, 1000));
     
 
     if (!localStorage.getItem('videoplayer-current-time')) {
         return;
-    }
-    const currenTime = JSON.parse(localStorage.getItem('videoplayer-current-time'));
+    } else {
+        const currenTime = JSON.parse(localStorage.getItem('videoplayer-current-time'));
     player.setCurrentTime(currenTime);
 }
